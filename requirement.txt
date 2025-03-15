@@ -1,0 +1,6 @@
+pandas
+numpy
+scikit-learn
+streamlit
+openpyxl
+python==3.10
