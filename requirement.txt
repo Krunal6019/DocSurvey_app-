@@ -1,5 +1,0 @@
-pandas
-numpy
-scikit-learn
-streamlit
-openpyxl  # If you're using Excel files
