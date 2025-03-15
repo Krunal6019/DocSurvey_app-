@@ -77,7 +77,12 @@ def predict_likely_doctors(model, df, features, input_hour):
 def main():
     st.title("Doctor Survey Campaign")
 
-    file_path = "dummy_npi_data.xlsx" # Replace with your file path.
+    file_path = "dummy_npi_data.xlsx" 
+    try:
+        df = pd.read_excel(file_path, engine="openpyxl")  # Explicitly set engine
+        print("✅ File loaded successfully!")
+    except Exception as e:
+        print(f"❌ Error loading data: {e}")
     if not os.path.exists(file_path):
         st.error("Dataset file not found. Please ensure the file exists at the specified path.")
         return
